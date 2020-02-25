@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息修改</title>
+</head>
+<body>
+<form action="update" method="post">
+    学号:<input type="text" name="id" value="${s.id}" readonly>
+    姓名:<input type="text" name="name" value="${s.name}">
+    性别:<input type="text" name="sex" value="${s.sex}">
+    年龄:<input type="text" name="age" value="${s.age}">
+    <input type="submit" value="修改">
+    <input type="reset" value="还原">
+</form>
+</body>
+</html>
