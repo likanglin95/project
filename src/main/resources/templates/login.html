@@ -10,6 +10,8 @@
 <#elseif err="2">
 密码错误
 <#elseif err="">
+<#elseif err = "3">
+注册成功
 <#else>
 </#if>
 
@@ -17,7 +19,7 @@
     账号:<input type="text" name="username"/><br/>
     密码:<input type="text" name="password"/><br/>
     <input type="submit" value="登录"/>
-    <input type="button" value="注册" onclick="window.location.href = 'regist.html'"/>
+    <input type="button" value="注册" onclick="window.location.href = 'reg'"/>
 </form>
 </body>
 </html>

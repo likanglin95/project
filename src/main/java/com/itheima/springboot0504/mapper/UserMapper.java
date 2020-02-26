@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface UserMapper {
     public User selectByName(String username);
+    public void addUser(User user);
 }

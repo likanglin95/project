@@ -32,11 +32,23 @@ public class UserController {
             }
         }
     }
+    //跳转的中间坐标  为了解决从一个html页面跳入另一个html报错所做出来的让步
     @RequestMapping("/index")
     public String index(Map<String,Object> map){
         map.put("err","");
-        //版本四更改行
         return "login";
+    }
+
+    @RequestMapping("/regist")
+    public String regist(User user, Map<String,Object> map){
+        this.userService.addUser(user);
+//        map.put("err","3");
+        return "/user/index";
+    }
+    //跳转的中间坐标
+    @RequestMapping("/reg")
+    public String reg(){
+        return "regist";
     }
 
 

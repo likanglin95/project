@@ -5,13 +5,13 @@
     <title>管理员注册</title>
 </head>
 <body>
-<form>
-    账号:<input type="text" name=""/><br/>
-    密码:<input type="text" name=""/><br/>
+<form action="/user/regist" method="post">
+    账号:<input type="text" name="username"/><br/>
+    密码:<input type="text" name="password"/><br/>
     确认密码:<input type="text" name=""/><br/>
-    手机:<input type="text" name=""/><br/>
-    邮箱:<input type="text" name=""/><br/>
-    身份证号码:<input type="text" name=""/><br/>
+    手机:<input type="text" name="phone"/><br/>
+    邮箱:<input type="text" name="email"/><br/>
+    身份证号码:<input type="text" name="id"/><br/>
     <input type="submit" value="提交"/>
     <input type="reset" value="重置"/>
 </form>

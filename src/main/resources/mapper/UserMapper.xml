@@ -9,4 +9,7 @@
     <select id="selectByName" resultType="com.itheima.springboot0504.domain.User">
         select <include refid="a"/> from user where username = #{username}
     </select>
+    <insert id="addUser">
+        insert into user values(#{username},#{password},#{phone},#{email},#{id})
+    </insert>
 </mapper>
