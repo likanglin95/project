@@ -6,7 +6,7 @@
     <sql id="a">
         username,password,phone,email,id
     </sql>
-    <select id="selectByName" resultType="String">
+    <select id="selectByName" resultType="com.itheima.springboot0504.domain.User">
         select <include refid="a"/> from user where username = #{username}
     </select>
 </mapper>

@@ -5,7 +5,14 @@
     <title>管理员登录</title>
 </head>
 <body>
-<if ></if>
+<#if err="1">
+    <h3>账户不存在</h3>
+<#elseif err="2">
+密码错误
+<#elseif err="">
+<#else>
+</#if>
+
 <form action="/user/login"  method="post">
     账号:<input type="text" name="username"/><br/>
     密码:<input type="text" name="password"/><br/>
