@@ -17,9 +17,13 @@ public class UserController {
     public String login(String username, Map<String,Object> map){
         User user = this.userService.selectByName(username);
         if (user==null){
-            return "login?err=1";
+            map.put("err",1);
+            return "login";
         }
-        return "未开发完毕";
+        else{
+            map.put("err",0);
+            return "redirect:/test/show";
+        }
     }
 
 }
