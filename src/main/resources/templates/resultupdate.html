@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩修改</title>
+</head>
+<body>
+<form action="/result/update" method="post">
+    学号:<input type="text" name="id" value="${r.id}" readonly>
+    姓名:<input type="text" name="name" value="${r.name}">
+    语文:<input type="text" name="chinese" value="${r.chinese}">
+    英语:<input type="text" name="english" value="${r.english}">
+    数学:<input type="text" name="math" value="${r.math}">
+    <input type="submit" value="修改">
+    <input type="reset" value="还原">
+</form>
+</body>
+</html>

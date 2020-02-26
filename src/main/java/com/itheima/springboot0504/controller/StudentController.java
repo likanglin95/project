@@ -1,6 +1,7 @@
 package com.itheima.springboot0504.controller;
 
 import com.itheima.springboot0504.domain.Student;
+import com.itheima.springboot0504.service.ResultService;
 import com.itheima.springboot0504.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,9 @@ import java.util.Map;
 public class StudentController {
     @Autowired
     private StudentService studentService;
+    @Autowired
+    private ResultService resultService;
+
     @RequestMapping("/show")
     public String show(Map<String,Object> map){
         map.put("show",studentService.selectAll());
@@ -29,12 +33,14 @@ public class StudentController {
     public String save(Student student){
         System.out.println(student.getId());
         this.studentService.insertOne(student);
+        this.resultService.save(student);
         return "redirect:/test/show";
     }
 
     @RequestMapping("/delete")
     public String delete(String id){
         studentService.deleteFromId(id);
+        this.resultService.deleteById(id);
         return "redirect:/test/show";
     }
 
@@ -46,6 +52,7 @@ public class StudentController {
     @RequestMapping("/update")
     public String update(Student student){
         this.studentService.updateById(student);
+        this.resultService.updatename(student);
         return "redirect:/test/show";
     }
 }
